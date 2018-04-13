@@ -1,0 +1,17 @@
+#!/bin/bash
+
+port=1 #5901
+geometry="1920x1080"
+depth=24
+dpi=96
+
+if ! [ $(which tightvncserver) ]; then
+        sudo apt update && sudo apt install tightvncserver -y
+else
+        vncserver -geometry "$geometry" :"$port" -depth "$depth" -dpi "$dpi"
+
+        if [ "$?" != 0 ]; then
+                vncserver -kill :"$port"
+                vncserver -geometry "$geometry" :"$port" -depth "$depth" -dpi "dpi"
+        fi
+fi
