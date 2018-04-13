@@ -40,4 +40,4 @@ However, since you are `ssh`'ing into your remote machine, you might as well jus
 
 ## License
 
-The code is available under the [MIT license](LICENSE.txt).
+The code is available under the [MIT license](LICENSE).
