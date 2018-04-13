@@ -29,7 +29,7 @@ wget -O ~/.vnc/xstartup https://github.com/nicholasadamou/VNC-Service/raw/master
 
 The VNC server restricts connections from the localhost only for security reasons.
 
-To connect to the vnc server over the network use an ssh tunnel (this is assuming that your vnc-server is running on `172.20.10.4`: 
+To connect to the vnc-server over the network use an ssh tunnel (this is assuming that your vnc-server is running on `172.20.10.4`: 
 
 ```
 ssh -L 5902:localhost:5901 root@172.20.10.4
