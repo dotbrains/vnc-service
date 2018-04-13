@@ -37,3 +37,7 @@ vncviewer 127.0.0.1::5902
 ```
 
 However, since you are `ssh`'ing into your remote machine, you might as well just type `vncserver` and be done instead of running it as a service.
+
+## License
+
+The code is available under the [MIT license](LICENSE.txt).
