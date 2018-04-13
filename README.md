@@ -4,7 +4,7 @@ Service file to start TightVNC or TigerVNC as a service in Kali-Linux.
 
 ## Use
 
-In order to use [`vncserver@.service`](vncserver@service) you must download it into the `/lib/systemd/system` directory by using the follow snippet:
+In order to use [`vncserver@.service`](vncserver@.service) you must download it into the `/lib/systemd/system` directory by using the follow snippet:
 
 ```
 sudo wget -O /lib/systemd/system/vncserver@.service https://github.com/nicholasadamou/VNC-Service/raw/master/vncserver@.service && \
