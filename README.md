@@ -14,7 +14,7 @@ sudo wget -O /lib/systemd/system/vncserver@.service https://github.com/nicholasa
     sudo systemctl start vncserver@1.service
 ```
 
-This service runs `vncserver` as `root`. This can be changed by modifying `/lib/systemd/system/vncserver@.service`.
+This service runs `vncserver` as the user `kali`. This can be changed by modifying `/lib/systemd/system/vncserver@.service`.
 
 ## Allow Multiple Concurrent `xfce` Sessions
 
@@ -32,7 +32,7 @@ The VNC server restricts connections from the localhost only for security reason
 To connect to the vnc-server over the network use an ssh tunnel (this is assuming that your vnc-server is running on `172.20.10.4`: 
 
 ```
-ssh -L 5902:localhost:5901 root@172.20.10.4
+ssh -L 5902:localhost:5901 kali@172.20.10.4
 vncviewer 127.0.0.1::5902
 ```
 
