@@ -7,14 +7,14 @@ Type=forking
 PAMName=login
 
 # User=root
-User=root
-PIDFile=/root/.vnc/%H:%i.pid
-ExecStartPre=/bin/sh -c "if [ -f /home/root/.vnc/%H:%i.pid ]; then /usr/bin/vncserver -kill :%i > /dev/null 2>&1 ; fi"
+#User=root
+#PIDFile=/root/.vnc/%H:%i.pid
+#ExecStartPre=/bin/sh -c "if [ -f /home/root/.vnc/%H:%i.pid ]; then /usr/bin/vncserver -kill :%i > /dev/null 2>&1 ; fi"
 
-# User=pi
-##User=pi
-##PIDFile=/home/pi/.vnc/%H:%i.pid
-##ExecStartPre=/bin/sh -c "if [ -f /home/pi/.vnc/%H:%i.pid ]; then /usr/bin/vncserver -kill :%i > /dev/null 2>&1 ; fi"
+# User=kali
+User=kali
+PIDFile=/home/kali/.vnc/%H:%i.pid
+ExecStartPre=/bin/sh -c "if [ -f /home/kali/.vnc/%H:%i.pid ]; then /usr/bin/vncserver -kill :%i > /dev/null 2>&1 ; fi"
 
 ExecStart=/usr/local/bin/start_tightvncserver
 ExecStop=/usr/bin/vncserver -kill :%i
